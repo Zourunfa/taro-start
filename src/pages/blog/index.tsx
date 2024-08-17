@@ -1,11 +1,21 @@
 import { Button, Text, View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 const Blog: FC = () => {
 
   const [blogTitle, setBlogTitle] = useState<string>('afeng')
+  const testHandler = () => {
+    Taro.request({
+      url: 'http://jsonplaceholder.typicode.com/posts'
+    }).then(res => {
+      console.log(res.data, '----resData')
+    })
+  }
 
+  useEffect(() => {
+    testHandler()
+  })
   return (
     <View>
       <Text>Blog</Text>

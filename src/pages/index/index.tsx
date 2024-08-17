@@ -20,6 +20,7 @@ export default function Index() {
       <Text>Hello world!12213</Text>
       <Text>{blogTitle}</Text>
       <Image src={playerUrl} />
+      {blogTitle === 'afeng' && <Text>afeng</Text> || <Text>123</Text>}
     </View>
   )
 }
