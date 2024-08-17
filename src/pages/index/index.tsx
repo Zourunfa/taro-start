@@ -1,7 +1,7 @@
 import { Image, Text, View } from '@tarojs/components'
 import { getCurrentInstance, useLoad } from '@tarojs/taro'
 import { useEffect, useState } from 'react'
-// taro的静态资源只能通过变量的方式引入，直接写在jsx的节点中会在打包过程中，路径会变找不到
+// taro的静态资源只能通过变量的方式引入或require的方式，直接写在jsx的节点中会在打包过程中，路径会变找不到
 import playerUrl from '../../assets/play_guitar.jpg'
 import './index.scss'
 
